@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    width: 800px;
+    flex-wrap: wrap;
+}
+
+.newDiv {
+    width: 50px; 
+    height: 50px;
+    border: 1px solid black;
+}
+.newDiv:hover {
+    background-color: aquamarine;
+}
