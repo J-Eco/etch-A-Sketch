@@ -8,6 +8,20 @@ body {
     justify-content: center;
     align-items: center;
 }
+.main {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    margin-bottom: 1rem;
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(92, 247, 208);
+    border-radius: 12px;
+}
 .container {
     display: flex;
     width: 800px;
@@ -15,10 +29,10 @@ body {
 }
 
 .newDiv {
+    /* background-color: rgba(0, 255, 180); */
     width: 50px; 
     height: 50px;
     border: 1px solid black;
-}
-.newDiv:hover {
-    background-color: aquamarine;
+    transition: all .15s;
+    opacity: 0;
 }
