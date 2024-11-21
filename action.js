@@ -1,14 +1,14 @@
-let grid = 256;
+// let grid = 256;
+let grid = 16;
 
 function createCanvas(num) {
     const container = document.querySelector('.container');
     if (document.querySelector('.newDiv')) {
         rmOldCanvas();
     }
-    for (let i = 0; i < grid; i++) {
+    for (let i = 0; i < (grid * grid); i++) {
         const div = document.createElement('div');
         div.setAttribute('class', 'newDiv');
-        console.log(div.length);
         container.appendChild(div);
     }
 
@@ -35,6 +35,7 @@ function boostOpacity(ele) {
 
 function rmOldCanvas() {
     let getDivList = document.querySelectorAll('.container > .newDiv')
+    console.log(getDivList.length);
     getDivList.forEach((element) => {
         element.remove();
     })
@@ -44,6 +45,11 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', (event) => {
     const response = prompt("Num of Squares per side?", "Max Number of 100");
-    grid = parseFloat(response);
-    createCanvas(grid);
+    if (response !== '' && typeof Number(response) === 'number' && response < 100 && response > 0) {
+        grid = parseFloat(response);
+        createCanvas(grid);
+    }
+    else {
+        alert('Input must be a number: 0 - 100.');
+    }
 })
