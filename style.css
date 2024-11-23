@@ -4,11 +4,26 @@
     padding: 0;
 }
  .main {
-    max-width: 100%;
-    width: 70em;
-    margin: 0 auto;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
     padding: 9px;
  }
+
+button {
+    padding: 15px 30px;
+    border: none;
+    background-color: aquamarine;
+    border-radius: 15px;
+}
+.sqrNum:hover {
+    background-color: rgb(91, 228, 182);
+    cursor: pointer;
+}
 
 .container {
     display: flex;
@@ -21,7 +36,6 @@
 .newDiv {
     width: 50px;
     height: 50px;
-    border: 1px solid black;
     transition: all .01s;
     opacity: 0;
 }

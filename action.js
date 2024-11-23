@@ -2,6 +2,7 @@ let grid = 16;
 
 function createCanvas(num) {
     const container = document.querySelector('.container');
+    console.log(container.offsetWidth)
     if (document.querySelector('.newDiv')) {
         rmOldCanvas();
     }
@@ -16,6 +17,10 @@ function createCanvas(num) {
         const divGrid = document.querySelectorAll('.newDiv');
         console.log(divGrid.length);
         divGrid.forEach((element) => {
+            let blockSize = (800 / num) + "px";
+            element.style.width = blockSize;
+            element.style.height = blockSize;
+            console.log(blockSize);
             element.addEventListener('mouseover', () => {
                 boostOpacity(element);
             })
